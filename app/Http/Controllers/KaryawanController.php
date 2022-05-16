@@ -22,7 +22,7 @@ class KaryawanController extends Controller
 		$karyawan = DB::table('karyawan')
 		->where('nama_depan','like',"%".$cari."%")
 		->paginate();
-		return view('karyawan',['karyawann' => $karyawan]);
+		return view('karyawan',['title' => 'Data Karyawan','karyawann' => $karyawan]);
 	}
 
 	public function tambah(Request $request)
